@@ -1,6 +1,9 @@
+color yellow = #FFFF00;
+
+
 void setup() {
   size(600, 600);
-  color yellow = #FFFF00;
+  
 }
 
 void draw () {
@@ -22,5 +25,5 @@ void draw () {
    line(400, 400, 450, 400);
    line(425, 375, 425, 425);
    fill(yellow);
-   
+   ellipse(100, 100, 100, 100); 
 }
