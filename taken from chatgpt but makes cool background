@@ -1,0 +1,12 @@
+void setup() {
+  size(400, 400); 
+}
+
+void draw() {
+  // Change the background color over time using the frameCount
+  int r = (int)(sin(frameCount * 0.01) * 127 + 128); // Red value oscillates between 0 and 255
+  int g = (int)(sin(frameCount * 0.02 + PI/2) * 127 + 128); // Green value oscillates between 0 and 255
+  int b = (int)(sin(frameCount * 0.03 + PI) * 127 + 128); // Blue value oscillates between 0 and 255
+
+  background(r, g, b); // Set the background color using RGB values
+}
