@@ -5,6 +5,7 @@ color white = #FFFFFF;
 color dgreen = #006400;
 color lgreen = #90EE90;
 float suny;
+float moony;
 
 void setup() {
   size(600, 600);
@@ -12,16 +13,28 @@ void setup() {
 }
 
 void draw () {
-  background(#ADD8E6);
+   if (450 < suny) {
+   background(0);
+   }
+   else {
+   background(#ADD8E6);
+   }
+  
    
    //the sun
    fill(yellow);
    circle(100, suny, 100);
    suny = suny - 1;
    if (suny < -100) {
-     suny = 500;
+     suny = 1000;
    }
-   
+   //the moon
+   fill(white);
+   circle(100, moony - 500, 75);
+   moony = moony - 1;
+   if (moony < -100) {
+     moony = 1000;
+   }
    
    //mountains in the back
    
