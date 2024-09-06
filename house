@@ -1,20 +1,46 @@
 color yellow = #FFFF00;
-
+color gray1 = #A9A9A9;
+color gray2 = #818589;
+color white = #FFFFFF;
+float suny;
 
 void setup() {
   size(600, 600);
-  
+  suny = 100;
 }
 
 void draw () {
   background(#ADD8E6);
+   
+   //the sun
+   fill(yellow);
+   circle(100, suny, 100);
+   suny = suny + 1;
+   if (suny > height) {
+     suny = -100;
+   }
+   
+   
+   //mountains in the back
+   fill(gray2);
+   
+   //mountains in the front 
+   fill(gray1);
+   strokeWeight(0.6);
+   triangle(150, 100, 0, 450, 300, 450);
+   triangle(550, 90, 400, 450, 700, 450);
+   triangle(350, 130, 200, 450, 500, 450);
+   
+   fill(white);
+   triangle(150, 100, 130, 150, 170, 150);
+   triangle(550, 90, 525, 150, 575, 150);
+   triangle(350, 130, 320, 195, 380, 195);
+   // house main body and tree trunk
    fill(165, 42, 42);
    strokeWeight(3);
    rect(300, 300, 200, 150);
-   rect(100, 320, 50, 130);
-   fill(0, 255, 0);
-   ellipse(125, 300, 130, 100);
-   rect(0, 450, 600, 150);
+   rect(100, 320, 50, 130);   
+   
    fill(0);
    triangle(400, 200, 250, 300, 550, 300);
    fill(255,255,0);
@@ -24,6 +50,12 @@ void draw () {
    ellipse(370, 410, 10, 10);
    line(400, 400, 450, 400);
    line(425, 375, 425, 425);
-   fill(yellow);
-   ellipse(100, 100, 100, 100); 
+
+   
+   //ground
+   fill(0, 255, 0);
+   ellipse(125, 300, 130, 100);
+   rect(0, 450, 600, 150);
+
+
 }
