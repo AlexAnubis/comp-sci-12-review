@@ -17,9 +17,9 @@ void draw () {
    //the sun
    fill(yellow);
    circle(100, suny, 100);
-   suny = suny + 1;
-   if (suny > height) {
-     suny = -100;
+   suny = suny - 1;
+   if (suny < -100) {
+     suny = 500;
    }
    
    
