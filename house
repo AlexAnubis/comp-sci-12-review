@@ -2,6 +2,8 @@ color yellow = #FFFF00;
 color gray1 = #A9A9A9;
 color gray2 = #818589;
 color white = #FFFFFF;
+color dgreen = #006400;
+color lgreen = #90EE90;
 float suny;
 
 void setup() {
@@ -22,7 +24,6 @@ void draw () {
    
    
    //mountains in the back
-   fill(gray2);
    
    //mountains in the front 
    fill(gray1);
@@ -35,6 +36,9 @@ void draw () {
    triangle(150, 100, 130, 150, 170, 150);
    triangle(550, 90, 525, 150, 575, 150);
    triangle(350, 130, 320, 195, 380, 195);
+   
+   fill(lgreen);
+   ellipse(200, 450, 400, 200);
    // house main body and tree trunk
    fill(165, 42, 42);
    strokeWeight(3);
